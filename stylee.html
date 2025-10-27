@@ -1,0 +1,262 @@
+/* Reset dan gaya dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Gaya untuk link header tanpa garis bawah */
+.no-underline {
+  text-decoration: none;
+  color: inherit;
+}
+
+header {
+  background-color: #386675;
+  color: white;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.5rem;
+}
+
+nav a:hover {
+  background-color: #384756;
+  border-radius: 4px;
+}
+
+/* Hero Section - Diperbaiki untuk Pusatkan Konten */
+.hero {
+  display: flex; /* Gunakan flexbox */
+  flex-direction: column; /* Susun elemen secara vertikal */
+  align-items: center; /* Pusatkan secara horizontal */
+  justify-content: center; /* Pusatkan secara vertikal jika tinggi cukup */
+  padding: 1rem;
+  background-color: #ecf0f1;
+  text-align: center; /* Pusatkan teks */
+  min-height: 30vh; /* Opsional: Buat hero setidaknya 70% tinggi layar */
+}
+
+.hero-text {
+  margin-top: 1cm; /* Jarak antara gambar dan teks */
+}
+
+.profile-pic {
+  margin-top: 1cm;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Gaya untuk semua h2 agar memiliki tampilan seperti header */
+section h2 {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: white; /* Teks menjadi putih */
+  background-color: #386675; /* Latar belakang biru gelap seperti header */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1.25rem;
+}
+
+main h2 {
+  display: inline-block;
+  margin-left: 0.85cm;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: white; /* Teks menjadi putih */
+  background-color: #386675; /* Latar belakang biru gelap seperti header */
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1.25rem;
+}
+
+/* Gaya untuk h2 di dalam link no-underline agar sama seperti judul "Skills" */
+a.no-underline h2 {
+  margin-left: 0.85cm;
+  margin-top: 1rem;
+  display: inline-block;
+  color: white;
+  background-color: #2c3e50;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  font-size: 1.25rem;
+  text-decoration: none; /* Pastikan tidak ada garis bawah dari link */
+  border: none;
+}
+
+/* Opsional: Efek hover saat mouse over */
+a.no-underline:hover h2 {
+  background-color: #1a252f; /* Sedikit lebih gelap saat hover */
+}
+
+/* Gaya untuk wadah tombol (pagination-links) */
+.pagination-links {
+  margin-top: 2rem; /* Jarak dari daftar skill sebelumnya */
+  display: flex; /* Buat tombol berjajar horizontal */
+  gap: 1rem; /* Jarak antar tombol */
+  /* Jika ingin tombol berada di tengah, tambahkan: */
+  justify-content: center;
+  /* Jika ingin tombol berada di kiri, hapus justify-content */
+  /* Jika ingin tombol berada di kanan, ganti menjadi: justify-content: flex-end; */
+}
+
+/* Sections */
+section {
+  padding: 2rem;
+}
+
+.about p {
+  margin-bottom: 0.5rem;
+}
+
+/* Skills */
+.skill-item {
+  margin-bottom: 1rem;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.fill {
+  height: 100%;
+  background-color: #5b95ce;
+  transition: width 0.3s ease;
+}
+
+/* Table */
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+th {
+  background-color: #386675;
+  color: white;
+}
+
+/* Form */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+}
+
+form input, form select, form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Gaya untuk checkbox dan label */
+.checkbox-container {
+  display: flex;
+  align-items: flex-start; /* Sejajar ke atas (agar teks panjang tidak tengah) */
+  gap: 0.5rem; /* Jarak antara kotak dan teks */
+  margin-top: 1rem;
+}
+
+.checkbox-container input[type="checkbox"] {
+  margin-top: 0.25rem; /* Sedikit jarak atas agar sejajar dengan baris pertama teks */
+  width: 15px; /* Atur ukuran checkbox jika perlu */
+  height: 15px;
+  accent-color: #3498db; /* Opsional: Warna centang modern */
+}
+
+.checkbox-container label {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #333;
+  cursor: pointer; /* Ubah kursor saat hover ke label */
+}
+
+form button {
+  margin-top: 1.5rem;
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #219a52;
+}
+
+/* Footer */
+footer {
+  background-color: #386675;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #3498db;
+}
+
+/* Responsif - Tidak perlu perubahan tambahan karena sudah fleksibel */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0.25rem;
+  }
+
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  section {
+    padding: 1rem;
+  }
+}
